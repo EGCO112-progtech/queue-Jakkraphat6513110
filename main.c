@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include "Node.h"
 
 #include "Queue.h"
@@ -35,9 +36,5 @@ int main(int argc , char **argv) {
   if (q.size == 1) printf("There is 1 ppl left in the queue\n");
   else if (q.size > 1) printf("There are %d ppl left in the queue\n", q.size);
   printf("Clearing queue\n");
-  while(q.size > 0)
-  {
-    dequeue_struct(&q);
-  }
   return 0;
 }

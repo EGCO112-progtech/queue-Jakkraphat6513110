@@ -64,7 +64,9 @@ void dequeue_struct(Queue *q)
       printf("Cash: ");
       scanf("%d", &money);
     }
-
+  if(money > cost){
+    printf("Change is: %d\n",money-cost);
+  }
     q->head = q->head->nextPtr;
     if (q->head == NULL)
       q->tail = NULL;
